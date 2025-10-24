@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Система управления складом</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Панель управления складом</h2>
+
+    <div class="dashboard">
+      <div class="dashboard-item">
+        <h3>📦 Склад</h3>
+        <div class="stat-number">{{ warehouse_count }}</div>
+        <p>Всего товаров</p>
+        <button onclick="window.location.href='/warehouse'">Управление</button>
+      </div>
+
+      <div class="dashboard-item">
+        <h3>🏢 Поставщики</h3>
+        <div class="stat-number">{{ supplier_count }}</div>
+        <p>Активных поставщиков</p>
+        <button onclick="window.location.href='/supplier'">Управление</button>
+      </div>
+
+      <div class="dashboard-item">
+        <h3>📋 Заказы</h3>
+        <div class="stat-number">{{ order_count }}</div>
+        <p>Всего заказов</p>
+        <button onclick="window.location.href='/orders'">Управление</button>
+      </div>
+
+      <div class="dashboard-item">
+        <h3>👥 Сотрудники</h3>
+        <div class="stat-number">{{ employee_count }}</div>
+        <p>Всего сотрудников</p>
+        <button onclick="window.location.href='/employees'">Управление</button>
+      </div>
+
+      <div class="dashboard-item">
+        <h3>👤 Покупатели</h3>
+        <div class="stat-number">{{ buyer_count }}</div>
+        <p>Всего покупателей</p>
+        <button onclick="window.location.href='/buyers'">Управление</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

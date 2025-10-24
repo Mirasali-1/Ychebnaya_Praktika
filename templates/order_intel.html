@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Информация о заказе</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Информация о заказе №{{ order.Code }}</h2>
+
+    <form method="post">
+      <div class="order-details">
+        <h3>Основная информация</h3>
+        <table class="order-info">
+          <tr><td>Код заказа:</td><td>{{ order.Code }}</td></tr>
+          <tr><td>Сотрудник:</td><td>{{ order.employee.FIO if order.employee else 'Не указан' }}</td></tr>
+          <tr><td>Покупатель:</td><td>{{ order.buyer.Buyer_name if order.buyer else 'Не указан' }}</td></tr>
+          <tr><td>Телефон покупателя:</td><td>{{ order.buyer.number_buy if order.buyer else 'Не указан' }}</td></tr>
+          <tr><td>Адрес покупателя:</td><td>{{ order.buyer.adress_buy if order.buyer else 'Не указан' }}</td></tr>
+        </table>
+
+        <h3>Товары в заказе</h3>
+        <table class="products-table">
+          <thead>
+            <tr>
+              <th>Товар</th>
+              <th>Количество</th>
+              <th>Цена за шт.</th>
+              <th>Общая стоимость</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in order.items %}
+            <tr>
+              <td>{{ item.product.Name_tov if item.product else 'Неизвестный товар' }}</td>
+              <td>{{ item.quantity }} шт.</td>
+              <td>{{ item.product.price if item.product else 0 }} руб.</td>
+              <td>{{ (item.product.price * item.quantity) if item.product else 0 }} руб.</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3" style="text-align: right; font-weight: bold;">Общая стоимость заказа:</td>
+              <td style="font-weight: bold;">
+                {% set total = [] %}
+                {% for item in order.items %}
+                  {% if total.append(item.product.price * item.quantity) %}{% endif %}
+                {% endfor %}
+                {{ total | sum }} руб.
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <h3>Управление заказом</h3>
+        <div class="form-group">
+          <label for="status">Статус заказа:</label>
+          <select id="status" name="status" required>
+            <option value="В обработке" {% if order.status == "В обработке" %}selected{% endif %}>В обработке</option>
+            <option value="Подтвержден" {% if order.status == "Подтвержден" %}selected{% endif %}>Подтвержден</option>
+            <option value="В сборке" {% if order.status == "В сборке" %}selected{% endif %}>В сборке</option>
+            <option value="Готов к отгрузке" {% if order.status == "Готов к отгрузке" %}selected{% endif %}>Готов к отгрузке</option>
+            <option value="Отгружен" {% if order.status == "Отгружен" %}selected{% endif %}>Отгружен</option>
+            <option value="Доставлен" {% if order.status == "Доставлен" %}selected{% endif %}>Доставлен</option>
+            <option value="Отменен" {% if order.status == "Отменен" %}selected{% endif %}>Отменен</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Описание / Комментарии:</label>
+          <textarea id="description" name="description" rows="4" placeholder="Введите дополнительную информацию о заказе...">{{ order.description or '' }}</textarea>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit">Сохранить изменения</button>
+        <button type="button" onclick="window.location.href='/orders'">Назад к списку заказов</button>
+        <button type="button" onclick="window.location.href='/order/{{ order.id_order }}/docx'" class="docx-btn">Скачать DOCX</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

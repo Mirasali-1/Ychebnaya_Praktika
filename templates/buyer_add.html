@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Добавить покупателя</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Добавить нового покупателя</h2>
+
+    <form method="post">
+      <p>ФИО: <input type="text" name="name" required></p>
+      <p>Телефон: <input type="text" name="number" required></p>
+      <p>Адрес: <input type="text" name="address" required></p>
+      <p>
+        <button type="submit">Сохранить</button>
+        <button type="button" onclick="window.location.href='/buyers'">Отмена</button>
+      </p>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Изменить сотрудника</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Изменить сотрудника {{ employee.id_employees }}</h2>
+
+    <form method="post">
+      <p>ФИО: <input type="text" name="fio" value="{{ employee.FIO }}" required></p>
+      <p>Опыт: <input type="text" name="experience" value="{{ employee.expirience }}" required></p>
+      <p>Телефон: <input type="text" name="number" value="{{ employee.number_emp }}" required></p>
+      <p>
+        <button type="submit">Сохранить</button>
+        <button type="button" onclick="window.location.href='/employees'">Отмена</button>
+      </p>
+    </form>
+  </div>
+</body>
+</html>

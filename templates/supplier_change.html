@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Изменить поставщика</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Изменить поставщика {{ supplier.id_supplier }}</h2>
+
+    <form method="post">
+      <p>Название: <input type="text" name="name" value="{{ supplier.Name_sup }}" required></p>
+      <p>Адрес: <input type="text" name="address" value="{{ supplier.adress_sup }}" required></p>
+      <p>Телефон: <input type="text" name="number" value="{{ supplier.number_sup }}" required></p>
+      <p>
+        <button type="submit">Сохранить</button>
+        <button type="button" onclick="window.location.href='/supplier'">Отмена</button>
+      </p>
+    </form>
+  </div>
+</body>
+</html>

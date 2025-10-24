@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Добавить новый заказ</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Добавить новый заказ</h2>
+
+    <form method="post" id="orderForm">
+      <p>
+        Код заказа:
+        <input type="text" name="code" id="orderCode" value="{{ random_code }}" required readonly>
+        <button type="button" onclick="generateNewCode()" style="margin-left: 10px;">Сгенерировать новый</button>
+      </p>
+      <p>Сотрудник:
+        <select name="employee_id" required>
+          <option value="">Выберите сотрудника</option>
+          {% for employee in employees|sort(attribute='id_employees') %}
+          <option value="{{ employee.id_employees }}">{{ employee.id_employees }}. {{ employee.FIO }}</option>
+          {% endfor %}
+        </select>
+      </p>
+      <p>Покупатель:
+        <select name="buyer_id" required>
+          <option value="">Выберите покупателя</option>
+          {% for buyer in buyers|sort(attribute='id_buyers') %}
+          <option value="{{ buyer.id_buyers }}">{{ buyer.id_buyers }}. {{ buyer.Buyer_name }}</option>
+          {% endfor %}
+        </select>
+      </p>
+
+      <h3>Товары в заказе</h3>
+      <div id="productsContainer">
+        <div class="product-row">
+          <p>
+            Товар:
+            <select name="product_id" required onchange="updateProductInfo(this)">
+              <option value="">Выберите товар</option>
+              {% for product in products|sort(attribute='id_Product') %}
+              <option value="{{ product.id_Product }}"
+                      data-price="{{ product.price }}"
+                      data-quantity="{{ product.quantity }}"
+                      data-name="{{ product.Name_tov }}">
+                {{ product.id_Product }}. {{ product.Name_tov }} - {{ product.price }} руб. (в наличии: {{ product.quantity }} шт.)
+              </option>
+              {% endfor %}
+            </select>
+            Количество:
+            <input type="number" name="quantity" value="1" min="1" max="100" required
+                   style="width: 80px;" onchange="validateQuantity(this)">
+            <span class="stock-info" style="margin-left: 10px; color: #666; font-size: 12px;"></span>
+            <button type="button" class="remove-product" onclick="removeProduct(this)">Удалить</button>
+          </p>
+        </div>
+      </div>
+
+      <button type="button" onclick="addProduct()">Добавить товар</button>
+
+      <div style="margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <strong>Общая стоимость: </strong><span id="totalCost">0</span> руб.
+      </div>
+
+      <p>
+        <button type="submit">Сохранить заказ</button>
+        <button type="button" onclick="window.location.href='/orders'">Отмена</button>
+      </p>
+    </form>
+  </div>
+
+  <script>
+    function generateNewCode() {
+      const randomNum = Math.floor(100000 + Math.random() * 900000);
+      const newCode = 'ORD' + randomNum;
+      document.getElementById('orderCode').value = newCode;
+    }
+
+    function addProduct() {
+      const container = document.getElementById('productsContainer');
+      const newRow = document.createElement('div');
+      newRow.className = 'product-row';
+      newRow.innerHTML = `
+        <p>
+          Товар:
+          <select name="product_id" required onchange="updateProductInfo(this)">
+            <option value="">Выберите товар</option>
+            {% for product in products|sort(attribute='id_Product') %}
+            <option value="{{ product.id_Product }}"
+                    data-price="{{ product.price }}"
+                    data-quantity="{{ product.quantity }}"
+                    data-name="{{ product.Name_tov }}">
+              {{ product.id_Product }}. {{ product.Name_tov }} - {{ product.price }} руб. (в наличии: {{ product.quantity }} шт.)
+            </option>
+            {% endfor %}
+          </select>
+          Количество:
+          <input type="number" name="quantity" value="1" min="1" max="100" required
+                 style="width: 80px;" onchange="validateQuantity(this)">
+          <span class="stock-info" style="margin-left: 10px; color: #666; font-size: 12px;"></span>
+          <button type="button" class="remove-product" onclick="removeProduct(this)">Удалить</button>
+        </p>
+      `;
+      container.appendChild(newRow);
+    }
+
+    function removeProduct(button) {
+      const rows = document.querySelectorAll('.product-row');
+      if (rows.length > 1) {
+        button.closest('.product-row').remove();
+        updateTotal();
+      } else {
+        alert('Должен остаться хотя бы один товар в заказе');
+      }
+    }
+
+    function updateProductInfo(select) {
+      const row = select.closest('.product-row');
+      const quantityInput = row.querySelector('input[name="quantity"]');
+      const stockInfo = row.querySelector('.stock-info');
+
+      if (select.value) {
+        const availableQuantity = parseInt(select.selectedOptions[0].getAttribute('data-quantity'));
+        const productName = select.selectedOptions[0].getAttribute('data-name');
+
+        stockInfo.textContent = `Макс: ${availableQuantity} шт.`;
+        quantityInput.max = availableQuantity;
+
+        if (parseInt(quantityInput.value) > availableQuantity) {
+          quantityInput.value = availableQuantity;
+        }
+
+        validateQuantity(quantityInput);
+      } else {
+        stockInfo.textContent = '';
+        quantityInput.max = 100;
+      }
+
+      updateTotal();
+    }
+
+    function validateQuantity(input) {
+      const row = input.closest('.product-row');
+      const select = row.querySelector('select[name="product_id"]');
+
+      if (select && select.value) {
+        const availableQuantity = parseInt(select.selectedOptions[0].getAttribute('data-quantity'));
+        const orderedQuantity = parseInt(input.value);
+        const stockInfo = row.querySelector('.stock-info');
+
+        if (orderedQuantity > availableQuantity) {
+          input.style.border = '2px solid #f44336';
+          stockInfo.style.color = '#f44336';
+          stockInfo.textContent = `Недостаточно! Доступно: ${availableQuantity} шт.`;
+        } else if (orderedQuantity === availableQuantity) {
+          input.style.border = '2px solid #ff9800';
+          stockInfo.style.color = '#ff9800';
+          stockInfo.textContent = `Последние ${availableQuantity} шт.`;
+        } else {
+          input.style.border = '2px solid #4caf50';
+          stockInfo.style.color = '#4caf50';
+          stockInfo.textContent = `Доступно: ${availableQuantity} шт.`;
+        }
+      }
+
+      updateTotal();
+    }
+
+    function validateStock() {
+      let isValid = true;
+      const productRows = document.querySelectorAll('.product-row');
+
+      productRows.forEach(row => {
+        const select = row.querySelector('select[name="product_id"]');
+        const quantityInput = row.querySelector('input[name="quantity"]');
+
+        if (select && select.value && quantityInput && quantityInput.value) {
+          const availableQuantity = parseInt(select.selectedOptions[0].getAttribute('data-quantity'));
+          const orderedQuantity = parseInt(quantityInput.value);
+
+          if (orderedQuantity > availableQuantity) {
+            isValid = false;
+            quantityInput.style.border = '2px solid #f44336';
+          }
+        }
+      });
+
+      return isValid;
+    }
+
+    function updateTotal() {
+      let total = 0;
+      const productRows = document.querySelectorAll('.product-row');
+
+      productRows.forEach(row => {
+        const select = row.querySelector('select[name="product_id"]');
+        const quantityInput = row.querySelector('input[name="quantity"]');
+
+        if (select && select.value && quantityInput && quantityInput.value) {
+          const price = parseFloat(select.selectedOptions[0].getAttribute('data-price'));
+          const quantity = parseInt(quantityInput.value);
+          total += price * quantity;
+        }
+      });
+
+      document.getElementById('totalCost').textContent = total.toFixed(2);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      updateTotal();
+
+      if (!document.getElementById('orderCode').value) {
+        generateNewCode();
+      }
+
+      const firstSelect = document.querySelector('select[name="product_id"]');
+      if (firstSelect) {
+        updateProductInfo(firstSelect);
+      }
+    });
+
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+      if (!validateStock()) {
+        e.preventDefault();
+        alert('Проверьте количество товаров! Некоторые позиции недоступны в запрашиваемом количестве.');
+      }
+    });
+  </script>
+</body>
+</html>

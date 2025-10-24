@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Добавить сотрудника</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Добавить нового сотрудника</h2>
+
+    <form method="post">
+      <p>ФИО: <input type="text" name="fio" required></p>
+      <p>Опыт: <input type="text" name="experience" required></p>
+      <p>Телефон: <input type="text" name="number" required></p>
+      <p>
+        <button type="submit">Сохранить</button>
+        <button type="button" onclick="window.location.href='/employees'">Отмена</button>
+      </p>
+    </form>
+  </div>
+</body>
+</html>
