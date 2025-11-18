@@ -1,0 +1,133 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 OPR/123.0.0.0 (Edition std-2)" version="29.0.3">
+  <diagram name="Страница-1" id="U6iYxzF-hmw_MwmPDhpR">
+    <mxGraphModel dx="1424" dy="2058" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ufJUfmf4R_EA9fD7aKDC-1" target="ufJUfmf4R_EA9fD7aKDC-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ufJUfmf4R_EA9fD7aKDC-1" target="ufJUfmf4R_EA9fD7aKDC-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-1" value="Приемка товаров от поставщиков" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="-130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ufJUfmf4R_EA9fD7aKDC-2" target="ufJUfmf4R_EA9fD7aKDC-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ufJUfmf4R_EA9fD7aKDC-2" target="ufJUfmf4R_EA9fD7aKDC-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ufJUfmf4R_EA9fD7aKDC-2" target="ufJUfmf4R_EA9fD7aKDC-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-2" value="Оформление заказа покупателя" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ufJUfmf4R_EA9fD7aKDC-3" target="ufJUfmf4R_EA9fD7aKDC-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ufJUfmf4R_EA9fD7aKDC-3" target="ufJUfmf4R_EA9fD7aKDC-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ufJUfmf4R_EA9fD7aKDC-3" target="ufJUfmf4R_EA9fD7aKDC-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ufJUfmf4R_EA9fD7aKDC-3" target="ufJUfmf4R_EA9fD7aKDC-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-3" value="Обработка и комплектация заказа" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ufJUfmf4R_EA9fD7aKDC-4" target="ufJUfmf4R_EA9fD7aKDC-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ufJUfmf4R_EA9fD7aKDC-4" target="ufJUfmf4R_EA9fD7aKDC-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ufJUfmf4R_EA9fD7aKDC-4" target="ufJUfmf4R_EA9fD7aKDC-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-4" value="Отгрузка заказа" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="810" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ufJUfmf4R_EA9fD7aKDC-5" target="ufJUfmf4R_EA9fD7aKDC-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ufJUfmf4R_EA9fD7aKDC-5" target="ufJUfmf4R_EA9fD7aKDC-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ufJUfmf4R_EA9fD7aKDC-5" target="ufJUfmf4R_EA9fD7aKDC-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-5" value="Подтверждения получения заказа" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-6" value="Размещение товаров на складе" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="-80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-7" value="Регистрация товаров в системе учета" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-8" value="Прием заявки от клиента" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ufJUfmf4R_EA9fD7aKDC-9" target="ufJUfmf4R_EA9fD7aKDC-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ufJUfmf4R_EA9fD7aKDC-9" target="ufJUfmf4R_EA9fD7aKDC-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ufJUfmf4R_EA9fD7aKDC-9" target="ufJUfmf4R_EA9fD7aKDC-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ufJUfmf4R_EA9fD7aKDC-9" target="ufJUfmf4R_EA9fD7aKDC-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ufJUfmf4R_EA9fD7aKDC-9" target="ufJUfmf4R_EA9fD7aKDC-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-9" value="Обработка и комплектация заказа" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="-220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-18" value="Формирование заказа" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-19" value="Подбор товаров для заказа" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-24" value="Компплектация товаров" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-25" value="Подтверждение заказа" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-28" value="Упаковка заказа" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-29" value="Оформление документации" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="730" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-34" value="Подготовка к отгрузке" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-35" value="Передача заказа" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="960" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-36" value="Фиксация отгрузки" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="1040" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-40" value="Доставка товара" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="1200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-41" value="Завершение заказа" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="1360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ufJUfmf4R_EA9fD7aKDC-42" value="Подтверждения получения" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="1280" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
