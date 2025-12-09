@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
--- Host: localhost    Database: warehouse
+-- Host: 127.0.0.1    Database: warehouse
 -- ------------------------------------------------------
--- Server version	8.0.21
+-- Server version	9.5.0
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -14,6 +14,14 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+SET @MYSQLDUMP_TEMP_LOG_BIN = @@SESSION.SQL_LOG_BIN;
+SET @@SESSION.SQL_LOG_BIN= 0;
+
+--
+-- GTID state at the beginning of the backup 
+--
+
+SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ 'ffe63c2d-c6f2-11f0-8c41-00ff3de45216:1-172';
 
 --
 -- Table structure for table `employees`
@@ -44,6 +52,7 @@ LOCK TABLES `employees` WRITE;
 INSERT INTO `employees` VALUES (1,'Петров Сергей Владимирович','5 лет','+74951111111',5,'2019-03-15'),(2,'Иванова Марина Александровна','3 года','+74952222222',1,'2021-06-01'),(3,'Смирнов Андрей Петрович','7 лет','+74953333333',2,'2017-09-10'),(4,'Кузнецова Елена Игоревна','4 года','+74954444444',4,'2020-02-20'),(5,'Соколов Михаил Дмитриевич','2 года','+74955555555',3,'2022-05-12'),(6,'Морозова Анастасия Сергеевна','6 лет','+74956666666',1,'2018-11-05'),(7,'Новиков Дмитрий Александрович','1 год','+74957777777',6,'2023-08-22'),(8,'Федорова Ольга Владимировна','8 лет','+74958888888',7,'2016-04-18'),(9,'Волков Алексей Иванович','3 года','+74959999999',9,'2021-10-30'),(10,'Павлова Светлана Николаевна','4 года','+74950000000',8,'2020-07-14'),(11,'Козлов Николай Петрович','5 лет','+74951010101',10,'2019-01-25'),(12,'Зайцева Виктория Дмитриевна','2 года','+74952020202',1,'2022-03-08');
 /*!40000 ALTER TABLE `employees` ENABLE KEYS */;
 UNLOCK TABLES;
+SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -54,4 +63,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-11-20 12:06:08
+-- Dump completed on 2025-12-10  0:42:21

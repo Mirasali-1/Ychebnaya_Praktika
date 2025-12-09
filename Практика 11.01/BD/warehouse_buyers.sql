@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
--- Host: localhost    Database: warehouse
+-- Host: 127.0.0.1    Database: warehouse
 -- ------------------------------------------------------
--- Server version	8.0.21
+-- Server version	9.5.0
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -14,6 +14,14 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+SET @MYSQLDUMP_TEMP_LOG_BIN = @@SESSION.SQL_LOG_BIN;
+SET @@SESSION.SQL_LOG_BIN= 0;
+
+--
+-- GTID state at the beginning of the backup 
+--
+
+SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ 'ffe63c2d-c6f2-11f0-8c41-00ff3de45216:1-172';
 
 --
 -- Table structure for table `buyers`
@@ -30,7 +38,7 @@ CREATE TABLE `buyers` (
   `email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Email покупателя',
   `discount` decimal(5,2) DEFAULT '0.00' COMMENT 'Персональная скидка в процентах',
   PRIMARY KEY (`id_buyers`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='База данных покупателей';
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='База данных покупателей';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,9 +47,10 @@ CREATE TABLE `buyers` (
 
 LOCK TABLES `buyers` WRITE;
 /*!40000 ALTER TABLE `buyers` DISABLE KEYS */;
-INSERT INTO `buyers` VALUES (1,'Сидоров Петр Иванович','+79161234567','Москва, ул. Тверская, д. 10, кв. 5','sidorov@mail.ru',5.00),(2,'Козлова Анна Сергеевна','+79162345678','Санкт-Петербург, Невский пр., д. 22, кв. 15','kozlova@gmail.com',3.00),(3,'ООО \"СтройКомплект\"','+79163456789','Казань, ул. Баумана, д. 50, офис 301','stroikomplekt@biz.ru',10.00),(4,'Морозов Игорь Владимирович','+79164567890','Новосибирск, ул. Ленина, д. 33, кв. 88','morozov.iv@yandex.ru',0.00),(5,'Белова Екатерина Дмитриевна','+79165678901','Екатеринбург, ул. 8 Марта, д. 7, кв. 12','belova.ed@mail.ru',7.00),(6,'ИП Кузнецов М.А.','+79166789012','Краснодар, ул. Красная, д. 100','kuznetsov.ma@gmail.com',8.00),(7,'Николаев Дмитрий Петрович','+79167890123','Челябинск, пр. Победы, д. 15, кв. 44','nikolaev@inbox.ru',2.00),(8,'ООО \"ОфисЦентр\"','+79168901234','Омск, ул. Ленина, д. 18, офис 205','office@center.ru',12.00),(9,'Смирнова Ольга Александровна','+79169012345','Ростов-на-Дону, ул. Пушкинская, д. 66, кв. 3','smirnova@mail.ru',4.00),(10,'Васильев Александр Иванович','+79160123456','Уфа, ул. Ленина, д. 25, кв. 77','vasiliev.ai@yandex.ru',6.00),(11,'Федорова Мария Николаевна','+79161234501','Волгоград, ул. Мира, д. 40, кв. 55','fedorova.mn@gmail.com',5.00),(12,'ЗАО \"ТехПром\"','+79162345612','Пермь, ул. Ленина, д. 88, офис 401','teh@prom.ru',15.00);
+INSERT INTO `buyers` VALUES (1,'Сидоров Петр Иванович','+79161234567','Москва, ул. Тверская, д. 10, кв. 5','sidorov@mail.ru',5.00),(2,'Козлова Анна Сергеевна','+79162345678','Санкт-Петербург, Невский пр., д. 22, кв. 15','kozlova@gmail.com',3.00),(3,'ООО \"СтройКомплект\"','+79163456789','Казань, ул. Баумана, д. 50, офис 301','stroikomplekt@biz.ru',10.00),(4,'Морозов Игорь Владимирович','+79164567890','Новосибирск, ул. Ленина, д. 33, кв. 88','morozov.iv@yandex.ru',0.00),(5,'Белова Екатерина Дмитриевна','+79165678901','Екатеринбург, ул. 8 Марта, д. 7, кв. 12','belova.ed@mail.ru',7.00),(6,'ИП Кузнецов М.А.','+79166789012','Краснодар, ул. Красная, д. 100','kuznetsov.ma@gmail.com',8.00),(7,'Николаев Дмитрий Петрович','+79167890123','Челябинск, пр. Победы, д. 15, кв. 44','nikolaev@inbox.ru',2.00),(8,'ООО \"ОфисЦентр\"','+79168901234','Омск, ул. Ленина, д. 18, офис 205','office@center.ru',12.00),(9,'Смирнова Ольга Александровна','+79169012345','Ростов-на-Дону, ул. Пушкинская, д. 66, кв. 3','smirnova@mail.ru',4.00),(10,'Васильев Александр Иванович','+79160123456','Уфа, ул. Ленина, д. 25, кв. 77','vasiliev.ai@yandex.ru',6.00),(11,'Федорова Мария Николаевна','+79161234501','Волгоград, ул. Мира, д. 40, кв. 55','fedorova.mn@gmail.com',5.00),(12,'ЗАО \"ТехПром\"','+79162345612','Пермь, ул. Ленина, д. 88, офис 401','teh@prom.ru',15.00),(13,'Иван Иванов Иванович','79991234567','Москва, ул. Примерная, д.1, кв.23',NULL,0.00);
 /*!40000 ALTER TABLE `buyers` ENABLE KEYS */;
 UNLOCK TABLES;
+SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -52,4 +61,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-11-20 12:06:08
+-- Dump completed on 2025-12-10  0:42:21

@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
--- Host: localhost    Database: warehouse
+-- Host: 127.0.0.1    Database: warehouse
 -- ------------------------------------------------------
--- Server version	8.0.21
+-- Server version	9.5.0
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -14,6 +14,14 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+SET @MYSQLDUMP_TEMP_LOG_BIN = @@SESSION.SQL_LOG_BIN;
+SET @@SESSION.SQL_LOG_BIN= 0;
+
+--
+-- GTID state at the beginning of the backup 
+--
+
+SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ 'ffe63c2d-c6f2-11f0-8c41-00ff3de45216:1-172';
 
 --
 -- Table structure for table `category`
@@ -39,6 +47,7 @@ LOCK TABLES `category` WRITE;
 INSERT INTO `category` VALUES (1,'Электроника','Электронные устройства и комплектующие'),(2,'Бытовая техника','Техника для дома и кухни'),(3,'Мебель','Офисная и домашняя мебель'),(4,'Канцелярия','Канцелярские товары и принадлежности'),(5,'Строительные материалы','Материалы для ремонта и строительства'),(6,'Продукты питания','Продовольственные товары'),(7,'Одежда и обувь','Текстильные изделия и обувь'),(8,'Спортивные товары','Товары для спорта и активного отдыха'),(9,'Игрушки','Детские игрушки и развлечения'),(10,'Автотовары','Товары для автомобилей'),(11,'Инструменты','Ручные и электроинструменты'),(12,'Садовый инвентарь','Товары для сада и огорода');
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 UNLOCK TABLES;
+SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -49,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-11-20 12:06:08
+-- Dump completed on 2025-12-10  0:42:21
