@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
+﻿-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: warehouse
 -- ------------------------------------------------------
@@ -21,7 +21,7 @@ SET @@SESSION.SQL_LOG_BIN= 0;
 -- GTID state at the beginning of the backup 
 --
 
-SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ 'ffe63c2d-c6f2-11f0-8c41-00ff3de45216:1-172';
+
 
 --
 -- Table structure for table `category`
