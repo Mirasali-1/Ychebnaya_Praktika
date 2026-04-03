@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.4">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36">
   <diagram name="Страница-1" id="mbNc96x_d0HDzIrY7i3K">
-    <mxGraphModel dx="2505" dy="924" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1958" dy="628" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -223,6 +223,12 @@
         </mxCell>
         <mxCell id="0Mjellyq6slDO_nXEdai-64" parent="1" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
           <mxGeometry height="30" width="30" x="501" y="1220" as="geometry" />
+        </mxCell>
+        <mxCell id="nw93lbyH8ob0D6pZgbmu-1" parent="1" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" value="Заказ клиента" vertex="1">
+          <mxGeometry height="50" width="70" x="-100" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="nw93lbyH8ob0D6pZgbmu-2" edge="1" parent="1" source="0Mjellyq6slDO_nXEdai-11" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=70;entryDy=32;entryPerimeter=0;dashed=1;" target="nw93lbyH8ob0D6pZgbmu-1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
